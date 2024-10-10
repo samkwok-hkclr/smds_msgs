@@ -1,15 +1,15 @@
-# Cancel Task
+# Cancel Order
 
 # Identifier for who is requesting the service
 uint16 requester_id
 
-# generated task ID
-string task_id
+# generated order ID
+string order_id
 
 ---
 
 # Confirmation that this service call is processed
 bool success
 
-# This will provide a verbose message regarding task cancellation
+# This will provide a verbose message regarding order cancellation
 string message

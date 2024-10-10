@@ -1,0 +1,2 @@
+uint8 station_id
+uint8 plate_id

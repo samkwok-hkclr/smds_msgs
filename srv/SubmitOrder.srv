@@ -1,21 +1,21 @@
-# Submit Task 
+# Submit Order 
+
+# A unique ID for this request
+uint64 order_id
 
 # Identifier for who is requesting the service
 uint16 requester_id
 
-# desciption of task
-TaskDescription description
+# Desciption of order
+Order order
 
 ---
 
 # Confirmation that this service call is processed
 bool success
 
-# A unique ID for this request
-uint32 task_id
-
 # The unique ID of the pillbox ID
 uint32 pillbox_id
 
-# This will provide a verbose message regarding task submission
+# This will provide a verbose message regarding order submission
 string message

@@ -11,16 +11,19 @@ find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 
 set(msg_files
-  "msg/Pill.msg"
+  "msg/DailyDose.msg"
+  "msg/DailyDoseOwned.msg"
+  "msg/Drug.msg"
+  "msg/DrugOwned.msg"
+  "msg/Order.msg"
+  "msg/OrderState.msg"
   "msg/State.msg"
-  "msg/TaskDescription.msg"
-  "msg/TaskResult.msg"
-  "msg/TaskState.msg"
+  "msg/Station.msg"
 )
 
 set(srv_files
-  "srv/SubmitTask.srv"
-  "srv/CancelTask.srv"
+  "srv/SubmitOrder.srv"
+  "srv/CancelOrder.srv"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
