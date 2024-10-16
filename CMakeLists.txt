@@ -19,7 +19,6 @@ set(msg_files
   "msg/Order.msg"
   "msg/OrderState.msg"
   "msg/PackageInfo.msg"
-  "msg/StationIn.msg"
   "msg/StationLoc.msg"
   "msg/StationState.msg"
 )
