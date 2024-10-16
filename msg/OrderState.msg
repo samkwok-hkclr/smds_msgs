@@ -17,7 +17,7 @@ uint8 ERROR=3
 bool is_completed
 
 # Specify the exact location of the pillbox
-uint16 location_id
+uint16 loc_id
 
 # A list of pills currently in the pillbox
 DailyDoseOwned[7] days
