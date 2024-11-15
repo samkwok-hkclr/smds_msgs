@@ -1,0 +1,17 @@
+# Packaging Order for Packaging Machine
+
+uint32 order_id
+uint32 material_box_id
+
+# An vector containing information to be printed on the material box.
+string[] print_info
+
+# Identifier for who is requesting the service
+uint16 requester_id
+
+---
+
+bool success
+
+# This will provide a verbose message regarding order submission
+string message

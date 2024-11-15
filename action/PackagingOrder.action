@@ -1,0 +1,22 @@
+# Request
+
+uint32 order_id
+uint32 material_box_id
+string[] print_info
+
+---
+
+# Result
+
+# 0: unsuccessful, 1: successful
+bool[] order_result
+
+---
+
+# Feedback
+
+# 0: incomplete, 1: complete
+bool[] curr_order_status
+
+# 0: drugs are in material box, 1: drugs have fallen to packaging machine
+bool are_drugs_fallen

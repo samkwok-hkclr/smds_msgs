@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(smds_msgs)
+project(smdps_msgs)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -7,8 +7,14 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+
+set(action_files
+  "action/PackagingOrder.action"
+)
 
 set(msg_files
   "msg/DailyDose.msg"
@@ -19,19 +25,22 @@ set(msg_files
   "msg/Order.msg"
   "msg/OrderState.msg"
   "msg/PackageInfo.msg"
+  "msg/PackagingMachineStatus.msg"
+  "msg/PackagingResult.msg"
   "msg/StationLoc.msg"
   "msg/StationState.msg"
 )
 
 set(srv_files
   "srv/CancelOrder.srv"
-  "srv/PrintOrder.srv"
+  "srv/PackagingOrder.srv"
   "srv/SubmitOrder.srv"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
+  ${action_files}
   DEPENDENCIES
     builtin_interfaces
     std_msgs
