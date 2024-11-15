@@ -13,5 +13,5 @@ uint16 requester_id
 
 bool success
 
-# This will provide a verbose message regarding order submission
+# This will provide a verbose message
 string message
